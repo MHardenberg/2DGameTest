@@ -19,7 +19,8 @@ int Window::init() {
             return 1;};
     
     window = SDL_CreateWindow("Window", SDL_WINDOWPOS_CENTERED,
-            SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_SHOWN);
+            SDL_WINDOWPOS_CENTERED, Window::win_width, Window::win_height,
+            SDL_WINDOW_SHOWN);
 
     if(window == nullptr){
             cout << "Err: " << SDL_GetError() << endl;
