@@ -15,8 +15,9 @@ class Window {
     SDL_Surface* image_surface = nullptr;
 
     public:
-        int init();
-        int draw();
+        string name;
         ~Window();
+        int init(const char* name);
+        int draw();
 };
 #endif

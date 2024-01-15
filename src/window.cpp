@@ -13,12 +13,12 @@ Window::~Window() {
 }
 
 
-int Window::init() {
+int Window::init(const char* name) {
     if(SDL_Init(SDL_INIT_VIDEO)){
             cout << "Err:" << SDL_GetError() << endl;
             return 1;};
     
-    window = SDL_CreateWindow("Window", SDL_WINDOWPOS_CENTERED,
+    window = SDL_CreateWindow(name, SDL_WINDOWPOS_CENTERED,
             SDL_WINDOWPOS_CENTERED, Window::win_width, Window::win_height,
             SDL_WINDOW_SHOWN);
 
@@ -48,5 +48,4 @@ int Window::draw() {
         return 1;}
 
     return 0;
-
 }

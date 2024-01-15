@@ -1,28 +1,15 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_events.h>
-#include "window.h"
+#include "game.h"
 
 using namespace std;
 
 
 int main() {
-    Window window;
-    window.init();
+    Game game;
+    game.run();
 
-    // event loop
-    bool quit = false;
-    SDL_Event event;
+    return 0;
 
-    while (!quit) {
-        // handle event queue
-        while (SDL_PollEvent(&event)) {
-            if( event.type == SDL_QUIT ) {
-                        quit = true;
-            }
-        }
-
-        window.draw();
-
-    }
 }
 

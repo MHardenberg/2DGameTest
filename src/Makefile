@@ -1,5 +1,5 @@
 #OBJS
-OBJS = main.cpp window.cpp
+OBJS = main.cpp game.cpp window.cpp
 
 #CC
 CC = g++
