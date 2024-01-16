@@ -1,5 +1,4 @@
 #include <SDL2/SDL_surface.h>
-#include <iostream>
 #include "window.h"
 
 using namespace std;

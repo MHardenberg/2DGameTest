@@ -1,5 +1,5 @@
 #include "game.h"
-#include "window.h"
+#include "gui/window.h"
 
 Game::Game() {
     Game::window.init(Game::title);

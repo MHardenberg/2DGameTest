@@ -1,7 +1,7 @@
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <string>
-#include "window.h"
+#include "gui/window.h"
 
 using namespace std;
 

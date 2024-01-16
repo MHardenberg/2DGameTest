@@ -1,22 +1,17 @@
+#include <iostream>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_events.h>
 #include "game.h"
-#include <iostream>
-#include <fstream>
+#include "gamemap.h"
 using namespace std;
 
 
 int main() {
     
-    string line;
-    ifstream file;
-    file.open("map/test.map");
-    if (file.is_open()){
-        while(getline(file, line)){
-            cout << line << endl;
-        }
-            file.close();
-    }
+    GameMap map;
+    map.fromFile("map/test.map");
+    map.debugPrint();
+
 
     Game game;
     game.run();
