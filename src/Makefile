@@ -20,7 +20,7 @@ release :
 	$(CC) $(OBJS) $(COMPILER_FLAGS) -o3 $(LINKER_FLAGS) -o $(OBJ_NAME) -s
 
 run : test
-	./game
+	./$(OBJ_NAME)
 
 debug : test
 	gdb $(OBJ_NAME)
