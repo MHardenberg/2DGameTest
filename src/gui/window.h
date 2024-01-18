@@ -3,6 +3,7 @@
 #include <SDL2/SDL_ttf.h>
 using namespace std;
 
+
 #ifndef window_H
 #define window_H
 

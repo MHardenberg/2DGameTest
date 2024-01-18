@@ -5,7 +5,7 @@ using namespace std;
 
 
 SDL_Color White = {255, 255, 255};
-TTF_Font* font = TTF_OpenFont("Sans.ttf", 18);
+//TTF_Font* font = TTF_OpenFont("Sans.ttf", 18);
 
 
 Window::Window() {
@@ -18,7 +18,7 @@ Window::~Window() {
             SDL_DestroyWindow(window);
             SDL_FreeSurface(image_surface);
             SDL_Quit();
-            TTF_Quit();
+            //TTF_Quit();
 }
 
 
@@ -61,6 +61,7 @@ int Window::draw() {
 
 
 void Window::debugMsg(string debugString) {
+/*
     SDL_Rect messageRect;
     messageRect.x = 0; messageRect.y = 0;
     messageRect.w = 100; messageRect.y = 100; // thios might need to be 
@@ -69,5 +70,5 @@ void Window::debugMsg(string debugString) {
     SDL_Surface* messageSurf = TTF_RenderText_Solid(font, &debugString, White);
     SDL_Texture* messageText = SDL_createTextureFromSurface(Window::renderer, 
             messageSurf);
-    SDL_RenderCopy(Window::renderer, messageText, nullptr, &messageRect);
+    SDL_RenderCopy(Window::renderer, messageText, nullptr, &messageRect);*/
 }

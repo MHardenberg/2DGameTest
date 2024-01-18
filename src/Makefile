@@ -2,7 +2,7 @@
 OBJS = main.cpp game.cpp gamemap.cpp gui/window.cpp
 
 #CC
-CC = g++
+CC = g++ -std=c++23
 
 #COMPILER_FLAGS 
 COMPILERFLAGS = -Wall
@@ -13,8 +13,16 @@ LINKER_FLAGS = -lSDL2
 #OBJ_NAME specifies the name of our exectuable
 OBJ_NAME = game
 
-build : 
-	$(CC) $(OBJS) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o $(OBJ_NAME)
+test : 
+	$(CC) $(OBJS) $(COMPILER_FLAGS) -fsanitize=address $(LINKER_FLAGS) -o $(OBJ_NAME) -g
 
-run : build
+release : 
+	$(CC) $(OBJS) $(COMPILER_FLAGS) -o3 $(LINKER_FLAGS) -o $(OBJ_NAME) -s
+
+run : test
 	./game
+
+debug : test
+	gdb $(OBJ_NAME)
+
+
