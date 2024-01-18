@@ -1,5 +1,5 @@
 #OBJS
-OBJS = main.cpp
+OBJS = main.cpp game.cpp map/gamemap.cpp gui/window.cpp
 
 #CC
 CC = g++ -std=c++23
@@ -11,7 +11,7 @@ COMPILERFLAGS = -Wall
 LINKER_FLAGS = -lSDL2
 
 #OBJ_NAME specifies the name of our exectuable
-OBJ_NAME = game
+OBJ_NAME = game.out
 
 test : 
 	$(CC) $(OBJS) $(COMPILER_FLAGS) -fsanitize=address $(LINKER_FLAGS) -o $(OBJ_NAME) -g
