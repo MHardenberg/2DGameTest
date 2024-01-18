@@ -8,7 +8,6 @@ using namespace std;
 
 
 Window::Window() {
-    SDL_Init(SDL_INIT_EVERYTHING);
     window = SDL_CreateWindow(title.data(), SDL_WINDOWPOS_CENTERED,
                 SDL_WINDOWPOS_CENTERED, win_width, win_height,
                 SDL_WINDOW_SHOWN);
@@ -23,7 +22,6 @@ Window::Window() {
 Window::~Window() {
     SDL_DestroyWindow(window);
     SDL_FreeSurface(window_surface);
-    SDL_Quit();
 }
 
 int Window::renderFrame() {
