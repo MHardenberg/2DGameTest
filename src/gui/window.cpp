@@ -23,6 +23,7 @@ Window::Window() {
 Window::~Window() {
     SDL_DestroyWindow(window);
     SDL_FreeSurface(window_surface);
+    SDL_Quit();
 }
 
 int Window::renderFrame() {
