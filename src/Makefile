@@ -1,5 +1,5 @@
 #OBJS
-OBJS = main.cpp game.cpp gamemap.cpp gui/window.cpp
+OBJS = main.cpp
 
 #CC
 CC = g++ -std=c++23
